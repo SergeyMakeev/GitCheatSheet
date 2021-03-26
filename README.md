@@ -37,3 +37,5 @@ Every url should listed twice (fetch and push)
 
 # GitHub UI Hints & Tricks
 
+1. Add .patch postix to PR to get a diff file  
+e.g., `https://github.com/repo/pull/123` -> `https://github.com/repo/pull/123.patch`
