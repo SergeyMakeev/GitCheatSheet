@@ -9,3 +9,4 @@
 `git remote add upstream https://full_path_to_repo/repo.git`
 4. Verify the new upstream repository you've specified for your fork  
 `git remote -v`
+Every url should listed twice (fetch and push)
