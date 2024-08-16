@@ -9,15 +9,22 @@
 `git remote add upstream https://full_path_to_repo/repo.git`
 4. Verify the new upstream repository you've specified for your fork  
 `git remote -v`
-Every url should listed twice (fetch and push)
+Every URL should listed twice (fetch and push)
 
 
 # Sync your fork with upstream
 
-1. Fetch original master `Upstream/Master`
+1. Fetch the original master `Upstream/Master`
 2. Checkout your fork local master `Local/Master`
 3. Merge `Upstream/Master` to `Local/Master` (Fast Forward)
-4. Push `Local/Master` to `Origin/Master`  (This will update remote master in your fork)
+4. Push `Local/Master` to `Origin/Master`  (This will update the remote master in your fork)
+
+```
+git fetch --all
+git checkout master
+git merge upstream/master
+git push
+```
 
 # Merge
 
@@ -28,7 +35,7 @@ Every url should listed twice (fetch and push)
 5. Push `Local/Feature` to `Origin/Feature`
 
 
-# Diff a feature branch with your form master branch (rebase alternative)
+# Diff a feature branch with your form master branch (alternative to rebase)
 1. Open Git Console/Bash
 2. Create patchfile  
 `git diff master...Feature-Branch > diff.patch`
@@ -37,5 +44,5 @@ Every url should listed twice (fetch and push)
 
 # GitHub UI Hints & Tricks
 
-1. Add .patch postix to PR to get a diff file  
+1. Add .patch postfix to PR to get a diff file  
 e.g., `https://github.com/repo/pull/123` -> `https://github.com/repo/pull/123.patch`
